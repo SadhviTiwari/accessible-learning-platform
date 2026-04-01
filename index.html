@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accessible Learning Platform</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+
+    <h1>🎓 Accessible Learning Platform</h1>
+
+    <div class="card">
+        <textarea id="textInput" placeholder="Type, speak, or upload a file..."></textarea>
+        <p id="status">Ready</p>
+
+        <div class="btn-group">
+            <button onclick="startVoice()">🎤 Voice Input</button>
+            <button onclick="speakText()">🔊 Start Reading</button>
+            <button onclick="toggleDark()">🌙 Dark Mode</button>
+            <button onclick="toggleContrast()">👁️ High Contrast</button>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="pauseSpeak()">⏸️ Pause</button>
+            <button onclick="resumeSpeak()">▶️ Resume</button>
+            <button onclick="stopSpeak()" class="btn-stop">⏹️ Stop</button>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="changeFontSize(4)">A++</button>
+            <button onclick="changeFontSize(-4)">A--</button>
+            <button onclick="translateText('hi')">🌐 To Hindi</button>
+            <button onclick="translateText('en')">🌐 To English</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📄 Document Reader</h3>
+        <input type="file" id="fileInput" onchange="handleFile(this.files[0])">
+    </div>
+
+    <div class="card">
+        <h3>🤖 AI Study Assistant</h3>
+        <div style="display:flex; gap:10px;">
+            <input id="chatInput" type="text" placeholder="Ask something..." />
+            <button onclick="askAI()">Ask</button>
+        </div>
+        <div id="chatOutput">Hello! Ask me anything.</div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
