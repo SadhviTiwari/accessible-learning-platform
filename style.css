@@ -1,0 +1,104 @@
+:root {
+    --primary: #667eea;
+    --secondary: #764ba2;
+    --bg: linear-gradient(135deg, #667eea, #764ba2);
+    --card: #ffffff;
+    --text: #333;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--card);
+    margin: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.btn-group {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--secondary);
+}
+
+.btn-stop { background: #e74c3c; }
+.btn-nav { background: #3498db; }
+.btn-contrast { background: #f39c12; }
+
+#status {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Dark mode */
+.dark {
+    background: #1a1a1a;
+    color: #eee;
+}
+
+.dark .card {
+    background: #2d2d2d;
+}
+
+/* High contrast */
+.high-contrast {
+    background: black;
+    color: yellow;
+}
+
+.high-contrast .card,
+.high-contrast button,
+.high-contrast textarea {
+    background: black;
+    color: yellow;
+    border: 1px solid yellow;
+}
+
+.chat-box {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+}
